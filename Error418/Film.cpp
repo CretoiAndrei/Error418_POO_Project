@@ -153,7 +153,8 @@ void Film::SetAn(int an)
 
 void Film::serialize(string fileName) 
 {
-	ofstream f(fileName, ios::binary);
+	string idS = to_string(id);
+	ofstream f("files/" + fileName + idS + ".dat", ios::binary);
 
 	f.write(nume, (long long)strlen(nume) + 1);
 	f.write(gen, (long long)strlen(gen) + 1);
@@ -169,7 +170,7 @@ void Film::serialize(string fileName)
 
 void Film::deserialize(string fileName)
 {
-	ifstream f(fileName, ios::binary);
+	ifstream f("files/"+fileName, ios::binary);
 
 	string buffer = "";
 	char c = 0;

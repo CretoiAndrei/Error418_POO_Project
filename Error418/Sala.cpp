@@ -133,12 +133,13 @@ ostream& operator<<(ostream& out, const Sala& i)
 {
 	out << "Nume: " << i.nume << endl;
 	out << "Numar randuri: " << i.randuri << endl;
-
-	out << "Locuri pe rand:";
-	for (int j = 0; j < i.randuri; j++) {
-		out << " " << i.locuri[j];
+	if (i.randuri > 0) {
+		out << "Locuri pe rand:";
+		for (int j = 0; j < i.randuri; j++) {
+			out << " " << i.locuri[j];
+		}
+		out << endl;
 	}
-	out << endl;
 	return out;
 }
 

@@ -150,6 +150,7 @@
     <ClInclude Include="Bilet.h" />
     <ClInclude Include="Difuzare.h" />
     <ClInclude Include="Film.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="Rezervare.h" />
     <ClInclude Include="Sala.h" />
   </ItemGroup>
